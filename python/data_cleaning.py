@@ -8,6 +8,22 @@ import pandas as pd
 # Load the dataset
 df = pd.read_csv("data/raw/electricity_raw.csv")
 
+# Rename columns to a standard format
+df = df.rename(columns={
+    "DisCo": "disco",
+    "Registered Customers": "registered_customers",
+    "Metering Rate (%)": "metering_rate",
+    "Billing Efficiency (%)": "billing_efficiency",
+    "Collection Efficiency (%)": "collection_efficiency",
+    "Total Complaints": "total_complaints",
+    "Revenue (₦ Billion)": "revenue_billion_naira",
+    "CDI Score": "cdi_score",
+    "Complaint Score": "complaint_score",
+    "Meter Score": "meter_score",
+    "Billing Score": "billing_score",
+    "Collection Score": "collection_score"
+})
+
 # Display basic information
 print(df.info())
 print(df.head())
