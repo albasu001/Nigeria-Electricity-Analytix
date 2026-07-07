@@ -35,14 +35,14 @@ print(
 # Average performance metrics
 print("\nAverage Performance Metrics:")
 print(
-    df[
-        [
-            "metering_rate",
-            "billing_efficiency",
-            "collection_efficiency",
-            "customer_satisfaction_score",
-        ]
-    ].mean()
+   df[
+    [
+        "metering_rate",
+        "billing_efficiency",
+        "collection_efficiency",
+        "cdi_score",
+    ]
+].mean()
 )
 
 print("\nEDA completed successfully.")
