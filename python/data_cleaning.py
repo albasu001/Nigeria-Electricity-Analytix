@@ -33,11 +33,9 @@ df = df.drop_duplicates()
 
 # Remove leading/trailing spaces from text columns
 df["disco"] = df["disco"].str.strip()
-df["region"] = df["region"].str.strip()
 
 # Standardize text to uppercase
 df["disco"] = df["disco"].str.upper()
-df["region"] = df["region"].str.upper()
 
 # Fill missing numeric values with the column median
 numeric_columns = df.select_dtypes(include="number").columns
